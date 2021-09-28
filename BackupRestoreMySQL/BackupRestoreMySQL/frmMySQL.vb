@@ -93,6 +93,8 @@ Public Class frmMySQL
 
     '// START HERE.
     Private Sub frmMySQL_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
+        btnBackup.Text = "Backup DataBase"
+        btnRestore.Text = "Restore DataBase"
         Try
             '// Create Backup Folder if doesn't exist.
             If (Not System.IO.Directory.Exists(GetPath(Application.StartupPath) & "Backup")) Then System.IO.Directory.CreateDirectory(GetPath(Application.StartupPath) & "Backup")
